@@ -50,7 +50,7 @@ const FeedbackForm = () => {
         <nav>
             Tell Us What You Think
         </nav>
-        <form className="feedback-form">
+        <form onSubmit={handleSubmit} className="feedback-form">
             <h2>We'd Love to Hear From You!</h2>
             <p>Please share your feedback with us.</p>
             <input type="text" name='name' placeholder='Your Name'  value={formData.name} onChange={handleChanges}/>
