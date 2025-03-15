@@ -8,6 +8,7 @@ const FeedbackForm = () => {
         feedback: ''
     })
 
+    // handleChanges pour gérer le changement des inputs si l'utilisateur entre une donnée
     const handleChanges = (event) => {
         const {name, value } = event.target;
         setFormData({
@@ -15,6 +16,35 @@ const FeedbackForm = () => {
             [name]: value
         });
     };
+
+    // handleSubmit pour gérer la soummission du formulaire
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // Construction du message de confirmation
+        const confirmationMessage = `
+            Name : ${formData.name}
+            Email : ${formData.email}
+            Feedback : ${formData.feedback}
+        `;
+
+        // isConfirmed recueillir si le user a confirmer ou annuler la boite de dialogue
+        const isConfirmed = window.confirm(`Please confirm your details: \n\n${confirmationMessage}`);
+        // si isConfirmed est true, on affiche le commentaire dans la co,sole et on réinitialise le state
+        // Puis un alert pour lui dire merci
+        if(isConfirmed) {
+            console.log('Submitting data', formData);
+
+            setFormData({
+                name: '',
+                email: '',
+                feedback: ''
+            });
+
+            alert('Thak you for your valuable feedback!');
+        }
+
+    };
+
   return (
     <>
         <nav>
