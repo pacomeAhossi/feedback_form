@@ -62,24 +62,21 @@ const FeedbackForm = () => {
             <div style={{display: 'flex', gap: '10px', flexDirection: 'column' }}>
                 <span>Rate Us</span>
                 <p>
-                    <input type="radio" name='rating' value="1" onChange={handleChanges} /> 
-                    1
+                    <input type="radio" name='rating' value="1" onChange={handleChanges} />  1
                 </p>
                 <p>
-                    <input type="radio" name='rating' value="2" onChange={handleChanges} /> 
-                    2
+                    <input type="radio" name='rating' value="2" onChange={handleChanges} />  2
                 </p>
                 <p>
-                    <input type="radio" name='rating' value="3" onChange={handleChanges} /> 
-                    3
+                    <input type="radio" name='rating' value="3" onChange={handleChanges} />  3
                 </p>
                 <p>
-                    <input type="radio" name='rating' value="4" onChange={handleChanges} /> 
-                    4
+                    <input type="radio" name='rating' value="4" onChange={handleChanges} />  4
+                
                 </p>
                 <p>
-                    <input type="radio" name='rating' value="5" onChange={handleChanges} /> 
-                    5
+                    <input type="radio" name='rating' value="5" onChange={handleChanges} />  5 
+                    
                 </p>
             </div>
             <button type='submit'>Submit feedback</button>
