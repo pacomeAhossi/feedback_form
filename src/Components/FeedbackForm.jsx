@@ -23,9 +23,9 @@ const FeedbackForm = () => {
         <form className="feedback-form">
             <h2>We'd Love to Hear From You!</h2>
             <p>Please share your feedback with us.</p>
-            <input type="text" name='name' placeholder='Your Name' />
-            <input type="email" name='email' placeholder='Your Email' />
-            <textarea name="feedback" cols="30" rows="10" placeholder='Your Feedback'></textarea>
+            <input type="text" name='name' placeholder='Your Name'  value={formData.name} onChange={handleChanges}/>
+            <input type="email" name='email' placeholder='Your Email'  value={formData.email} onChange={handleChanges}/>
+            <textarea name="feedback" cols="30" rows="10" placeholder='Your Feedback' value={formData.feedback} onChange={handleChanges}></textarea>
             <button type='submit'>Submit feedback</button>
         </form>
     </>
